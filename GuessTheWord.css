@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* plaseaza elementele in centru */
+    background-color: yellow;
+}
+
+#word {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#input {
+    padding: 8px;/* dimensiunea chenarului */
+    font-size: 16px;
+}
+
+#submit {
+    padding: 8px 16px;
+    /* dimensiunea butonului */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: cyan;
+    color: white;
+    border-color: blue;
+    transition: transform 0.1s ease;
+    /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.1s-durata
+    ease-modul de interpolare*/   
+}
+
+#submit:hover {
+    transform: scale(1.1);
+    width: 100px;
+    height: 50px;
+    /* creste dimensiunea butonului */
+}
+
+.button {
+    position: absolute;
+    /*pt a pozitiona elementul relativ la primul element parinte*/
+    top: 10px;
+    left: 10px;
+    /* pozitionarea butonului */
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    /* dimensiunea butonului */
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}

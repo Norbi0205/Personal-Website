@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*pentru a elimina marginile si padding-urile implicite*/
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /*pentru a evita bara de derulare*/
+    /*orice conținut care depășește dimensiunile elementului respectiv va fi ascuns și nu va fi vizibil pe ecran*/
+}
+
+h1 {
+    position: absolute;
+    /*pt a pozitiona elementul relativ la primul element parinte*/
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*translatat orizontal cu o valoare egală cu jumătate din lățimea sa (50% din lățime), dar în direcția opusă, adică spre stânga*/
+    text-align: center;
+    font-size: 70px;
+    color: red;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /*color-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    max-width: 100%;
+    /*latimea maxima a elementului*/
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*scalat pentru a umple complet zona elementului*/
+    z-index: -1;
+    /*plasează elementul în spatele elementelor care au valori mai mari sau care nu au fost explicit definite cu un z-index*/
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+     permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    /*aspect rotunjit, colturile rotunjite complet*/
+    cursor: pointer;
+    text-decoration: none;
+    /*pentru a elimina orice decorare text*/
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+   /*devine "relativ" la poziția sa inițială*/
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    /*Creste dimensiunea*/
+}
+
+.footer-img-wrapper {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    background-color: transparent;
+    margin: 90px;
+    /*Distanțarea mai mare între imagini*/
+    position: relative;
+}
+
+.footer-img-wrapper a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+.footer-img-wrapper:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 8px solid white;
+    /* Adăugarea unei borduri strălucitoare albe */
+    z-index: -1;
+    /* Asigură că bordura este în spatele imaginii */
+}
+
+img {
+    height: 90px;
+    width: 90px;
+}
+
+/*Stilizare footer*/
+footer {
+    padding-top: 410px;
+    display: flex;
+    /*container flexibil*/
+    justify-content: center;
+    /*Aliniere orizontală */
+}

@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('night.jpg');
+    /* Uniform Resource Locator */
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+}
+
+.login-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    /* spatiu din jurul elementului */
+    background-color: rgba(255, 255, 0, 0.8);
+    /* Ultimul parametru reprezintă transparența */
+    padding: 22px; /* spatiu -> creste dimensiunea cercului */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 1);
+    /* 0 reprezintă offset-ul orizontal al umbrei 
+       0 reprezintă offset-ul vertical al umbrei 
+       10px reprezintă raza umbrei, adică cât de întinsă este umbra. Cu cât valoarea este mai mare, cu atât umbra va fi mai extinsă */
+    position: absolute;
+    /* pt a pozitiona elementul relativ la primul element parinte */
+    top: 0;
+    left: 0;
+    display: flex;
+    /* flexibil */
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+   /* box-shadow - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s -durata
+    ease-in-out-modul de interpolare*/
+    /*  la începutul și la sfârșitul tranziției, 
+    viteza de schimbare a proprietății CSS este mai lentă, iar în mijlocul tranziției viteza de schimbare este mai rapidă */
+}
+
+.login-box:hover {
+    animation: shine 1s infinite;
+    /* shine: este numele animației. Acesta trebuie să corespundă cu numele definit al animației într-un bloc @keyframes */
+    /* se repeta la nesfarsit */
+}
+
+.login-box:hover h2 {
+    color: cyan;
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* ultimul parametru-transparenta */
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        /* ultimul parametru-transparenta */
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* ultimul paramteru-transparenta */
+    }
+}
+
+form {
+    width: 100%;
+}
+
+input[type="email"],
+input[type="password"]{
+    padding: 5px;
+    margin: 5px 0;
+    /* 5px sus-jos */
+    /* 0 stanga-dreapta */
+    border: 3px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: calc(100% - 80px);
+    /* lățimea elementului astfel încât să fie de 80 pixeli mai mică decât lățimea containerului în care se află */
+    padding: 15px;
+    /* dimensiunea butonului */
+    margin: 5px 0;
+    /* 5px sus-jos */
+    /* 0 stanga-dreapta */
+    border: 2px solid darkblue;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* all - se aplică tranziția pentru toate proprietățile CSS ale elementului
+    0.3s - durata
+    ease - modul de interpolare */
+}
+
+input[type="submit"]:hover {
+    border-color: cyan;
+    transform: scale(1.1);
+    /* creste dimensiunea */
+}

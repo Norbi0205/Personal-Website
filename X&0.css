@@ -1,0 +1,59 @@
+body {
+    background-color: blue;
+}
+
+p,
+h1 {
+    color: white;
+}
+
+/* Centram jocul */
+.container {
+    text-align: center;
+    margin-top: 1px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    font-size: 48px;
+    text-align: center;
+    vertical-align: middle; /*pentru a alinia vertical elementele în linie sau elementele inline-block în cadrul elementului lor părinte*/
+    cursor: pointer;
+    background-size: cover;
+}
+
+.winning-image {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    /*devine "relativ" la poziția sa inițială*/
+    transition: transform 0.3s ease;
+    /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+   
+}
+
+.button:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4682B4;
+    /* culoarea initiala */
+    transition: background-color 0.5s ease;
+    /*background-color - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.5s-durata
+    ease-modul de interpolare*/
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    /* setează marginile de sus și de jos la 0, eliminând orice spațiu de margini deasupra sau dedesubtul elementului */
+    /*  setează marginile stângă și dreaptă să fie calculate automat de către browser, 
+    ceea ce duce la centratul orizontal al elementului în cadrul blocului său conținător */
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: rgb(0, 0, 250);
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+    /* distanta dintre butoane */
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: border-radius 0.3s ease;
+    /*border-radius - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s -durata
+    ease-modul de interpolare*/  
+}
+
+.button:hover {
+    border: 3px solid;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+.footer img {
+    border: 3px solid black;
+    display: block;
+    margin: 0 auto;
+    /* setează marginile de sus și de jos la 0, eliminând orice spațiu de margini deasupra sau dedesubtul elementului */
+    /*  setează marginile stângă și dreaptă să fie calculate automat de către browser, 
+    ceea ce duce la centratul orizontal al elementului în cadrul blocului său conținător */
+    width: 500px;
+    height: auto;
+    /* înălțimea elementului se va ajusta automat pentru a se potrivi cu conținutul său */
+}
+
+.lbutton {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina*/
+    transition: transform 0.3s ease;
+    /* transform - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s -durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+    /* Creste dimensiunea */
+}

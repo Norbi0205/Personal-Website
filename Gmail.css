@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*flexibil*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: green;
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina*/
+    left: 10px;
+    top: 10px;
+    transition: transform 0.3s ease;
+     /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+}

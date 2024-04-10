@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /* pentru a evita bara de derulare */
+}
+
+h1 {
+    position: absolute;
+    /* pt a pozitiona elementul relativ la primul element parinte */
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* translatat orizontal cu o valoare egală cu jumătate din lățimea sa (50% din lățime), dar în direcția opusă, adică spre stânga */
+    text-align: center;
+    font-size: 70px;
+    color: red;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /*color-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    max-width: 100%;
+    /*Limitam latimea continutului*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('tiger.jpg');
+    /* Uniform Resource Locator */
+    background-size: cover;
+    /* Imaginea de fundal va fi redimensionată pentru a acoperi întreaga suprafață a elementului HTML, 
+    în timp ce se păstrează proporțiile originale ale imaginii și fără a se produce decupări sau distorsiuni vizibile */
+    background-position: center;
+    height: 100vh;
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    /* Dimensiunile butonului */
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina*/
+    transition: transform 0.3s ease;
+    /*color-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+    /* Creste dimensiunea */
+}
+
+#slider-left {
+    width: 200px;
+    height: 80vh;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina*/
+    left: 0;
+    /* se aliniază marginea dreaptă a elementului cu marginea dreaptă a blocului său de conținut */
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#slider-left img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 1px;
+    /* distanta dintre imagini */
+    transition: transform 0.3s ease;
+    /*transform - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    cursor: pointer;
+}
+
+#slider-right {
+    width: 200px;
+    height: 80vh;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina*/
+    right: 0;
+    /* se aliniază marginea dreaptă a elementului cu marginea dreaptă a blocului său de conținut */
+    top: 150px;
+    display: flex;
+    /* flexibil */
+    flex-direction: column;
+    align-items: center; /* dpdv orizontal */
+    justify-content: center; /*dpdv vertical */
+}
+
+#slider-right img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 1px;
+    /* distanta dintre imagini */
+    transition: transform 0.3s ease;
+    /*transform - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    cursor: pointer;
+}
+
+#slider-left img:hover,
+#slider-right img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 40px cyan;
+    /* niciun offset pe axa X, niciun offset pe axa Y, raza umbrei, culoarea*/
+}

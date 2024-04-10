@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: green;
+}
+
+p {
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina */
+    left: 10px;
+    top: 10px;
+    transition: transform 0.3s ease;
+    /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.image-container {
+    display: flex;
+    /* flexibil */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    /* Spațiul între imagini */
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s ease;
+    /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    border: 2px solid transparent;
+    /* Bordura transparentă inițial */
+}
+
+.image:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+    border-width: 4px;
+}
+
+.rock:hover {
+    border-color: magenta;
+    border-width: 4px;
+}
+
+.paper:hover {
+    border-color: cyan;
+    border-width: 4px;
+}
+
+.scissors:hover {
+    border-color: yellow;
+    border-width: 4px;
+}
+
+#userChoice,
+#computerChoice {
+    margin-top: 20px;
+}
+
+#computerChoice {
+    display: flex;
+    /* flexibil */
+    flex-direction: column;
+    /* coloane */
+    align-items: center;
+}
+
+.win {
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+.lose {
+    color: red;
+    font-weight: bold;
+}
+
+.draw {
+    color: blue;
+    font-weight: bold;
+}

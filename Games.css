@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('Earth.jpg');
+    /* Uniform Resource Locator */
+    background-size: cover;
+    /*imaginea de fundal va fi redimensionată pentru a acoperi întreaga suprafață a elementului HTML, 
+    în timp ce se păstrează proporțiile originale ale imaginii și fără a se produce decupări sau distorsiuni vizibile*/
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /*centru-verticala*/
+    align-items: center;
+    /*centru-orizontala*/
+    flex-direction: column;
+    /* Aliniaza elementele vertical */
+    position: relative;
+    /*devine "relativ" la poziția sa inițială*/
+}
+
+.button {
+    display: inline-block;
+     /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+     permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: #191970;
+    color: white;
+    padding: 15px 30px;/*dimensiuni*/
+    margin: 10px;/*distanta dintre butoane*/
+    border: 2px solid;
+    border-radius: 5px;/*rotunjire colturi*/
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: cyan;
+    border: 4px solid;
+}
+
+.button.border-blue {
+    border-color: blue;
+}
+
+.button.border-green {
+    border-color: green;
+}
+
+.button.border-yellow {
+    border-color: yellow;
+}
+
+h1 {
+    color: red;
+    /*Culoare initiala*/
+    font-size: 60px;
+}
+
+h2 {
+    color: cyan;
+    font-size: 40px;
+}
+
+.main-page-button {
+    display: inline-block;
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;/*dimensiunile*/
+    margin: 10px;
+    border: 10px solid;
+    /*bordura initiala*/
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    /*pt a pozitiona elementul relativ la primul element parinte*/
+    top: 10px;
+    /* Pozitia*/
+    left: 10px;
+    transition: transform 0.3s ease;
+     /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+
+.main-page-button:hover {
+    transform: scale(1.1);
+    /*Creste dimeniunea*/
+}

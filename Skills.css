@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /* pentru a evita bara de derulare */
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+h2 {
+    color: gray;
+}
+
+h1 {
+    position: absolute;
+    /* pt a pozitiona elementul relativ la primul element parinte */
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*translatat orizontal cu o valoare egală cu jumătate din lățimea sa (50% din lățime), dar în direcția opusă, adică spre stânga*/
+    text-align: center;
+    font-size: 70px;
+    color: red;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /*color-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    max-width: 100%;
+    /*latimea continutului*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('water.jpg');
+    /* Uniform Resource Locator */
+    background-size: cover;
+    /*scalat pentru a umple complet zona elementului*/
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    /* flexibil */
+    flex-direction: column;
+    /* coloane */
+    justify-content: space-between;
+    /* spatiat */
+}
+
+.columns-container {
+    display: flex;
+    /* flexibil */
+    justify-content: space-between;
+    /* spatiat */
+    align-items: center;
+    margin: 50px 10%;
+    /* 50 px pentru marginea de sus și de jos a elementului */
+    /* lățimea marginii din stânga și din dreapta va fi 10% din lățimea elementului */
+    flex-grow: 1;
+    /* Permite containerului să crească pentru a umple spațiul liber între header și footer */
+}
+
+.column {
+    width: 25%;
+    /* Reducem puțin lățimea coloanelor pentru a face loc între ele */
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina*/
+    left: 10px;
+    top: 10px;
+    transition: transform 0.3s ease;
+    /*transform - proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+}

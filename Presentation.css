@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    /* pentru a evita bara de derulare */
+}
+
+p {
+    position: absolute;
+    /* pt a pozitiona elementul relativ la primul element parinte */
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*translatat orizontal cu o valoare egală cu jumătate din lățimea sa (50% din lățime), dar în direcția opusă, adică spre stânga*/
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    transition: color 3s ease;
+    /*color-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    3s-durata
+    ease-modul de interpolare*/
+    max-width: 80%;
+    /*Limitam latimea continutului*/
+}
+
+h1 {
+    position: absolute;
+    /* pt a pozitiona elementul relativ la primul element parinte */
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*translatat orizontal cu o valoare egală cu jumătate din lățimea sa (50% din lățime), dar în direcția opusă, adică spre stânga*/
+    text-align: center;
+    font-size: 70px;
+    color: #00FFFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /*color-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+    max-width: 100%;
+   /*Limitam latimea continutului*/
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* pentru a evita bara de derulare */
+    position: absolute;
+    /* pt a pozitiona elementul relativ la primul element parinte */
+    bottom: 315px;
+    left: 25.7%;
+    transform: translateX(-50%);
+    /*translatat orizontal cu o valoare egală cu jumătate din lățimea sa (50% din lățime), dar în direcția opusă, adică spre stânga*/
+}
+
+#circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#background-video {
+    position: fixed;
+    /* va rămâne în aceeași poziție relativă la ecran atunci când utilizatorul derulează pagina */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*scalat pentru a umple complet zona elementului*/
+    z-index: -1;
+    /*plasează elementul în spatele elementelor care au valori mai mari sau care nu au fost explicit definite cu un z-index*/
+}
+
+.button {
+    display: inline-block;
+    /*plasat ca un element inline, dar, în același timp, acționează ca un element de bloc,
+    permițând ca alte elemente să fie așezate înainte și după el pe aceeași linie*/
+    background-color: cyan;
+    color: black;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 10px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    /*devine "relativ" la poziția sa inițială*/
+    transition: transform 0.3s ease;
+    /*transform-proprietatea CSS asupra căreia se dorește aplicarea efectului de tranziție
+    0.3s-durata
+    ease-modul de interpolare*/
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
