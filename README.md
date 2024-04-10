@@ -1,0 +1,1 @@
+I created a personal website using HTML, CSS and Javascript that contains a login page, a main page, a description page, a page about my hobbies, a page with hardware and software skills, a page with games and a page of contact.
